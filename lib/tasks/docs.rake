@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # If Rspec is not install don't define this task
 begin
   require 'rspec/core/rake_task'

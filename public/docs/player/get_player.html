@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>API Documentation</title>
-  <meta charset="utf-8">
-  <style>
-    
+  <head>
+    <title>Player API</title>
+    <meta charset="utf-8">
+    <style>
+      
 body {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 13px;
@@ -39,7 +39,7 @@ pre {
 
 td.required .name:after {
   float: right;
-  content: &quot;required&quot;;
+  content: "required";
   font-weight: normal;
   color: #F08080;
 }
@@ -102,24 +102,50 @@ table th, table td {
   text-align: left;
 }
 
-  </style>
-</head>
-<body>
-<div class="container">
-  <h1>API Documentation</h1>
-  
-  <div class="article">
-    <h2>Player</h2>
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Player API</h1>
 
-    <ul>
-      <li>
-        <a href="player/create_player.html">Create player</a>
-      </li>
-      <li>
-        <a href="player/get_player.html">Get player</a>
-      </li>
-    </ul>
-  </div>
-</div>
-</body>
+      <div class="article">
+        <h2>Get player</h2>
+        <h3>GET /players/:id</h3>
+
+
+
+          <h3>Request</h3>
+
+
+          <h4>Route</h4>
+          <pre class="request route highlight">GET /players/1</pre>
+
+
+
+
+            <h3>Response</h3>
+              <h4>Headers</h4>
+              <pre class="response headers">x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+x-content-type-options: nosniff
+x-permitted-cross-domain-policies: none
+referrer-policy: strict-origin-when-cross-origin
+content-type: application/json; charset=utf-8
+etag: W/&quot;38847fffdbb06765644b010977572bf7&quot;
+cache-control: max-age=0, private, must-revalidate
+x-request-id: 4159baba-22c0-41e4-8e2d-2ebebc93f1a9
+x-runtime: 0.013653
+content-length: 106</pre>
+            <h4>Status</h4>
+            <pre class="response status">200 OK</pre>
+              <h4>Body</h4>
+              <pre class="response body">{
+  &quot;id&quot;: 1,
+  &quot;nickname&quot;: &quot;john&quot;,
+  &quot;created_at&quot;: &quot;2024-05-04T14:24:02.586Z&quot;,
+  &quot;updated_at&quot;: &quot;2024-05-04T14:24:02.586Z&quot;
+}</pre>
+      </div>
+    </div>
+  </body>
 </html>
