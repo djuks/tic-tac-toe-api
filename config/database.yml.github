@@ -1,0 +1,9 @@
+test:
+  adapter: postgresql
+  host: <%= ENV['POSTGRES_HOST'] %>
+  port: <%= ENV['POSTGRES_PORT'] %>
+  encoding: unicode
+  database: tic_tac_toe_api_test
+  pool: 20
+  username: postgres
+  password: password1234
