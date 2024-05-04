@@ -1,0 +1,22 @@
+name: Code quality
+
+on: [push]
+
+jobs:
+  code_quality:
+    name: runner/code quality
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Setup ruby
+      uses: actions/setup-ruby@v1
+
+    - name: runner/rubocop
+      if: ${{ always() }}
+      uses: reviewdog/action-rubocop@v2
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        reporter: github-check
+        level: error
+        fail_on_error: true

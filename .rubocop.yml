@@ -1,0 +1,30 @@
+require:
+  - rubocop
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - "config/initializers/devise.rb"
+    - "db/schema.rb"
+    - "db/seeds.rb"
+    - "db/seeds/**/*"
+    - "db/migrate/*"
+    - "vendor/**/*"
+    #     - 'spec/**/*'
+    - "spec/fixtures/**/*"
+    - "spec/rails_helper.rb"
+    - "spec/spec_helper.rb"
+    - "tmp/**/*"
+    - "config/puma.rb"
+    - "bin/*"
+    - "config/environments/*"
+    - "Guardfile"
+    - "config/spring.rb"
+    - "config/application.rb"
+    - "app/controllers/users/registrations_controller.rb"
+
+Style/Documentation:
+  Enabled: false

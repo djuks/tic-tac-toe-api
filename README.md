@@ -15,3 +15,13 @@ Start server:
 ```
 docker-compose up
 ```
+## Development
+
+Linters - checker:
+```
+docker-compose run --rm api rubocop
+```
+Linters - auto-fix:
+```
+docker-compose run --rm api rubocop -A
+```
