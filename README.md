@@ -25,3 +25,15 @@ Linters - auto-fix:
 ```
 docker-compose run --rm api rubocop -A
 ```
+
+Rspec tests:
+```
+docker-compose run --rm api rspec
+```
+
+Generate api html docs use following command:
+```
+docker-compose run --rm \
+    -u $(id -u ${USER}):$(id -g ${USER}) \
+    api rails docs:generate:html
+```
