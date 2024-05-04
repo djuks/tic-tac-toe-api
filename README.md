@@ -1,24 +1,17 @@
-# README
+### Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To setup project on locale machine use following commands:
 
-Things you may want to cover:
+```
+git clone git@github.com:djuks/tic-tac-toe-api.git
+cd tic-tac-toe-api
+docker-compose build
+docker-compose run --rm api rails db:setup
+docker-compose run --rm api rails db:migrate
+```
 
-* Ruby version
+Start server:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+docker-compose up
+```
