@@ -3,15 +3,15 @@
 require 'rails_helper'
 require 'rspec_api_doc_helper'
 
-resource 'Player' do
+resource 'User' do
   before do
-    @player = create(:player)
+    @user = create(:user)
   end
 
-  get '/players/:id' do
-    let(:id) { @player.id }
+  get '/users/:id' do
+    let(:id) { @user.id }
 
-    example 'Get player' do
+    example 'Get user' do
       do_request
 
       expect(json_response['errors']).to be_nil
@@ -20,14 +20,14 @@ resource 'Player' do
     end
   end
 
-  post '/players' do
+  post '/users' do
     let(:nickname) { 'David' }
 
-    with_options scope: :player, required: true do
-      parameter :nickname, 'Player nickname'
+    with_options scope: :user, required: true do
+      parameter :nickname, 'User nickname'
     end
 
-    example 'Create player' do
+    example 'Create User' do
       do_request
 
       expect(json_response['errors']).to be_nil
@@ -36,14 +36,14 @@ resource 'Player' do
     end
   end
 
-  post '/players' do
+  post '/users' do
     let(:nickname) { '' }
 
-    with_options scope: :player do
-      parameter :nickname, 'Player nickname'
+    with_options scope: :user do
+      parameter :nickname, 'User nickname'
     end
 
-    example 'Create player', document: false do
+    example 'Create user', document: false do
       do_request
 
       expect(json_response['nickname']).to eq ["can't be blank"]

@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-class Player < ApplicationRecord
+class User < ApplicationRecord
   validates :nickname, presence: true
 end
