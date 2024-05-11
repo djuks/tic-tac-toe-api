@@ -37,3 +37,5 @@ docker-compose run --rm \
     -u $(id -u ${USER}):$(id -g ${USER}) \
     api rails docs:generate:html
 ```
+Documentation location:
+/public/docs/index.html
