@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>User API</title>
+    <title>Game API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,11 +106,11 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>User API</h1>
+      <h1>Game API</h1>
 
       <div class="article">
-        <h2>Delete user</h2>
-        <h3>DELETE /users/:id</h3>
+        <h2>End game</h2>
+        <h3>PUT /games/:id/end</h3>
 
 
 
@@ -120,7 +120,7 @@ table th, table td {
             <pre class="request headers">Content-Type: application/x-www-form-urlencoded</pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">DELETE /users/1</pre>
+          <pre class="request route highlight">PUT /games/1/end</pre>
 
 
 
@@ -133,17 +133,33 @@ x-content-type-options: nosniff
 x-permitted-cross-domain-policies: none
 referrer-policy: strict-origin-when-cross-origin
 content-type: application/json; charset=utf-8
-etag: W/&quot;23ab7aad6762459040843df2a1719989&quot;
+etag: W/&quot;29ee1c87b5b401ba5e48cb20ad1acc87&quot;
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 391a7fed-b539-447c-9135-acfc0e311ca1
-x-runtime: 0.005909
+x-request-id: 52c1dd43-0b8c-4e12-8963-bf5191d0e4c2
+x-runtime: 0.006935
 vary: Origin
-content-length: 30</pre>
+content-length: 287</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
-  &quot;message&quot;: &quot;User is deleted!&quot;
+  &quot;end_game&quot;: true,
+  &quot;id&quot;: 1,
+  &quot;player_1&quot;: &quot;john&quot;,
+  &quot;player_2&quot;: &quot;&quot;,
+  &quot;field_1&quot;: &quot;&quot;,
+  &quot;field_2&quot;: &quot;&quot;,
+  &quot;field_3&quot;: &quot;&quot;,
+  &quot;field_4&quot;: &quot;&quot;,
+  &quot;field_5&quot;: &quot;&quot;,
+  &quot;field_6&quot;: &quot;&quot;,
+  &quot;field_7&quot;: &quot;&quot;,
+  &quot;field_8&quot;: &quot;&quot;,
+  &quot;field_9&quot;: &quot;&quot;,
+  &quot;created_at&quot;: &quot;2024-05-11T20:29:49.850Z&quot;,
+  &quot;updated_at&quot;: &quot;2024-05-11T20:29:49.857Z&quot;,
+  &quot;last_played&quot;: null,
+  &quot;message&quot;: null
 }</pre>
       </div>
     </div>

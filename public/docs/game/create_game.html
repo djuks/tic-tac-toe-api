@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>User API</title>
+    <title>Game API</title>
     <meta charset="utf-8">
     <style>
       
@@ -106,21 +106,44 @@ table th, table td {
   </head>
   <body>
     <div class="container">
-      <h1>User API</h1>
+      <h1>Game API</h1>
 
       <div class="article">
-        <h2>Get user</h2>
-        <h3>GET /users/:id</h3>
+        <h2>Create game</h2>
+        <h3>POST /games</h3>
 
+          <h3>Parameters</h3>
+          <table class="parameters table table-striped table-bordered table-condensed">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="required">
+                    <span class="name">game[nickname]</span>
+                </td>
+                <td>
+                  <span class="description">User nickname</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
 
           <h3>Request</h3>
 
+            <h4>Headers</h4>
+            <pre class="request headers">Content-Type: application/x-www-form-urlencoded</pre>
 
           <h4>Route</h4>
-          <pre class="request route highlight">GET /users/1</pre>
+          <pre class="request route highlight">POST /games</pre>
 
 
+            <h4>Body</h4>
+            <pre class="request body">game[nickname]=David</pre>
 
 
             <h3>Response</h3>
@@ -131,20 +154,33 @@ x-content-type-options: nosniff
 x-permitted-cross-domain-policies: none
 referrer-policy: strict-origin-when-cross-origin
 content-type: application/json; charset=utf-8
-etag: W/&quot;8784d22251e445ea276173018e62a1b5&quot;
+etag: W/&quot;b18a3af1c029969ab2b69cde46bf6d9a&quot;
 cache-control: max-age=0, private, must-revalidate
-x-request-id: cb1f1edd-02c8-4afe-a59f-d022b3a8c886
-x-runtime: 0.033589
+x-request-id: 203378f2-db71-4553-8d6a-c70c0d552f49
+x-runtime: 0.010149
 vary: Origin
-content-length: 106</pre>
+content-length: 309</pre>
             <h4>Status</h4>
             <pre class="response status">200 OK</pre>
               <h4>Body</h4>
               <pre class="response body">{
-  &quot;id&quot;: 1,
-  &quot;nickname&quot;: &quot;john&quot;,
-  &quot;created_at&quot;: &quot;2024-05-11T13:19:45.526Z&quot;,
-  &quot;updated_at&quot;: &quot;2024-05-11T13:19:45.526Z&quot;
+  &quot;id&quot;: 2,
+  &quot;player_1&quot;: &quot;David&quot;,
+  &quot;player_2&quot;: null,
+  &quot;field_1&quot;: null,
+  &quot;field_2&quot;: null,
+  &quot;field_3&quot;: null,
+  &quot;field_4&quot;: null,
+  &quot;field_5&quot;: null,
+  &quot;field_6&quot;: null,
+  &quot;field_7&quot;: null,
+  &quot;field_8&quot;: null,
+  &quot;field_9&quot;: null,
+  &quot;created_at&quot;: &quot;2024-05-11T20:29:49.725Z&quot;,
+  &quot;updated_at&quot;: &quot;2024-05-11T20:29:49.725Z&quot;,
+  &quot;end_game&quot;: false,
+  &quot;last_played&quot;: null,
+  &quot;message&quot;: null
 }</pre>
       </div>
     </div>
