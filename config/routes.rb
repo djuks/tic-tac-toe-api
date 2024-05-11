@@ -9,5 +9,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :users, only: %i[create show]
+  # resource :games
+  post '/games', to: 'games#create'
+  get '/games/:id', to: 'games#show'
+  put '/games/:id', to: 'games#update'
+  put '/games/:id/end', to: 'games#end_game'
 end

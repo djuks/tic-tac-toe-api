@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :game do
     player_1 { 'john' }
-    player_2 { 'david' }
+    player_2 { '' }
     field_1 { '' }
     field_2 { '' }
     field_3 { '' }

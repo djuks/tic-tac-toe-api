@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>API Documentation</title>
-  <meta charset="utf-8">
-  <style>
-    
+  <head>
+    <title>User API</title>
+    <meta charset="utf-8">
+    <style>
+      
 body {
   font-family: Helvetica,Arial,sans-serif;
   font-size: 13px;
@@ -39,7 +39,7 @@ pre {
 
 td.required .name:after {
   float: right;
-  content: &quot;required&quot;;
+  content: "required";
   font-weight: normal;
   color: #F08080;
 }
@@ -102,27 +102,50 @@ table th, table td {
   text-align: left;
 }
 
-  </style>
-</head>
-<body>
-<div class="container">
-  <h1>API Documentation</h1>
-  
-  <div class="article">
-    <h2>User</h2>
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>User API</h1>
 
-    <ul>
-      <li>
-        <a href="user/create_user.html">Create User</a>
-      </li>
-      <li>
-        <a href="user/delete_user.html">Delete user</a>
-      </li>
-      <li>
-        <a href="user/get_user.html">Get user</a>
-      </li>
-    </ul>
-  </div>
-</div>
-</body>
+      <div class="article">
+        <h2>Delete user</h2>
+        <h3>DELETE /users/:id</h3>
+
+
+
+          <h3>Request</h3>
+
+            <h4>Headers</h4>
+            <pre class="request headers">Content-Type: application/x-www-form-urlencoded</pre>
+
+          <h4>Route</h4>
+          <pre class="request route highlight">DELETE /users/1</pre>
+
+
+
+
+            <h3>Response</h3>
+              <h4>Headers</h4>
+              <pre class="response headers">x-frame-options: SAMEORIGIN
+x-xss-protection: 0
+x-content-type-options: nosniff
+x-permitted-cross-domain-policies: none
+referrer-policy: strict-origin-when-cross-origin
+content-type: application/json; charset=utf-8
+etag: W/&quot;23ab7aad6762459040843df2a1719989&quot;
+cache-control: max-age=0, private, must-revalidate
+x-request-id: 391a7fed-b539-447c-9135-acfc0e311ca1
+x-runtime: 0.005909
+vary: Origin
+content-length: 30</pre>
+            <h4>Status</h4>
+            <pre class="response status">200 OK</pre>
+              <h4>Body</h4>
+              <pre class="response body">{
+  &quot;message&quot;: &quot;User is deleted!&quot;
+}</pre>
+      </div>
+    </div>
+  </body>
 </html>

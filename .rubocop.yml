@@ -25,8 +25,13 @@ AllCops:
     - "config/spring.rb"
     - "config/application.rb"
     - "app/controllers/users/registrations_controller.rb"
+    - "app/models/game.rb"
 
 Style/Documentation:
   Enabled: false
 RSpec/MultipleExpectations:
+  Enabled: false
+Naming/VariableNumber:
+  Enabled: false
+Lint/DuplicateBranch:
   Enabled: false
