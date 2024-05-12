@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Game < ApplicationRecord
+  after_save { broadcast_game }
   def game_logic
     if field_1 == 'X' && field_2 == 'X' && field_3 == 'X'
       'Player 1 WIN'
@@ -39,5 +40,11 @@ class Game < ApplicationRecord
     else
       'It is TIE!'
     end
+  end
+
+  private
+
+  def broadcast_game
+    ActionCable.server.broadcast("game_#{id}", self)
   end
 end
